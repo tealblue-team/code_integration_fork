@@ -51,8 +51,8 @@ int main(void)
 
 
     /*Create a Demo*/
-    //lv_demo_widgets();
-    app_create();
+    lv_demo_widgets();
+    //app_create();
 
 
 
