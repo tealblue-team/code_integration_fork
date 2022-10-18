@@ -127,8 +127,8 @@ void app_create()
     lv_label_set_text(leftLabel, "L");
     lv_obj_add_style(leftLabel, &textRoboto24GreenStyle, LV_STATE_DEFAULT);
 
-    //dentalArcInit(teethContainer); // Inizializzo bocca
-    //buttonsInit(teethContainer);   // Inizializzo bottoni
+    dentalArcInit(teethContainer); // Inizializzo bocca
+    buttonsInit(teethContainer);   // Inizializzo bottoni
 
     /* Inizializzo il bottone per il reset */
     lv_obj_t * resetBtn = lv_img_create(mainScreen);
