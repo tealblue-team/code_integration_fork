@@ -84,15 +84,15 @@ void app_create()
      /*
      * Inizializzo bocca
      */
-    lv_obj_t * teethContainer = lv_obj_create(mainScreen);
+    lv_obj_t* teethContainer = lv_obj_create(mainScreen);
 
     lv_obj_align(teethContainer, LV_ALIGN_CENTER, 0, 0);
     lv_obj_set_size(teethContainer, lv_pct(95), lv_pct(90));
     lv_obj_clear_flag(teethContainer, LV_OBJ_FLAG_SCROLLABLE);
     lv_obj_add_style(teethContainer, &whiteBackground, LV_STATE_DEFAULT);
 
-    lv_obj_t * rightLabel = lv_label_create(teethContainer);
-    lv_obj_set_align(rightLabel, LV_ALIGN_LEFT_MID);
+    lv_obj_t* rightLabel = lv_label_create(teethContainer);
+    lv_obj_set_align(rightLabel, LV_ALIGN_LEFT);
     lv_label_set_text(rightLabel, "R");
     lv_obj_add_style(rightLabel, &textRoboto24GreenStyle, LV_STATE_DEFAULT);
 
