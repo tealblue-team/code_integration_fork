@@ -37,8 +37,7 @@ extern lv_img_dsc_t topMidSelectionButtonImg;
 void reset_cb(lv_event_t* e) {
     lv_event_code_t code = lv_event_get_code(e);
     if (code == LV_EVENT_CLICKED) {
-        printf("Click!!");
-        //resetInitialChecked();
+        resetInitialChecked();
     }
 }
 
@@ -105,7 +104,7 @@ void app_create()
 
     lv_style_set_text_color(&textRobotoGreenStyle, colorGreen);
 
-    lv_obj_add_style(mainScreen, &whiteBackground, LV_STATE_DEFAULT);
+    //lv_obj_add_style(mainScreen, &whiteBackground, LV_STATE_DEFAULT);
 
     /*
      * Inizializzo bocca
@@ -155,10 +154,10 @@ void app_create()
     lv_obj_align(containerLaserData, LV_ALIGN_TOP_MID, -dimReset, 15);
     lv_obj_set_size(containerLaserData, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
 
-    //lv_obj_t * laserDataLabel = lv_label_create(containerLaserData);
-    //lv_label_set_text(laserDataLabel, "70 kW - 10 mA");
-    //lv_obj_add_style(laserDataLabel, &textRobotoGreenStyle, LV_STATE_DEFAULT);
-    //lv_obj_set_align(laserDataLabel, LV_ALIGN_CENTER);
+    lv_obj_t * laserDataLabel = lv_label_create(containerLaserData);
+    lv_label_set_text(laserDataLabel, "70 kW - 10 mA");
+    lv_obj_add_style(laserDataLabel, &textRobotoGreenStyle, LV_STATE_DEFAULT);
+    lv_obj_set_align(laserDataLabel, LV_ALIGN_CENTER);
 
 
     
