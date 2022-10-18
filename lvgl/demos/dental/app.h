@@ -9,10 +9,10 @@ extern "C" {
  *      INCLUDES
  **********************/
 
-//#include "lvgl/lvgl.h"
-//#include "dentalArc.h"
-//#include "selectButtons.h"
-//#include "widgetDemo.h"
+#include "../../lvgl.h"
+#include "dentalArc.h"
+#include "selectButtons.h"
+#include "widgetDemo.h"
 
 /**********************
  *       WIDGETS

@@ -76,14 +76,40 @@ void app_create()
 
 
 
-    lv_color_t colorGreen = lv_color_hex(0x448300);
+   /*
+     * Inizializzo gli stili
+     */
+    lv_color_t colorGreen = lv_color_hex(0x448300);  //Green in RGB
+    lv_color_t colorOrange = lv_color_hex(0xedbb3b); //Arancio
+
     lv_style_init(&whiteBackground);
     lv_style_set_bg_color(&whiteBackground, lv_color_white());
     lv_style_set_border_color(&whiteBackground, lv_color_white());
+
+    lv_style_init(&textRobotoStyle);
+    lv_style_set_text_font(&textRobotoStyle, &roboto_14);
+    lv_style_set_text_color(&textRobotoStyle, colorOrange);
+
     lv_style_init(&textRoboto24GreenStyle);
     lv_style_set_text_font(&textRoboto24GreenStyle, &roboto_24);
     lv_style_set_text_color(&textRoboto24GreenStyle, colorGreen);
-     /*
+
+    lv_style_init(&buttonPressedStyle);
+    lv_style_set_img_recolor_opa(&buttonPressedStyle, LV_OPA_30);
+    lv_style_set_img_recolor(&buttonPressedStyle, lv_color_black());
+
+    lv_style_init(&greenPressedStyle);
+    lv_style_set_img_recolor_opa(&greenPressedStyle, LV_OPA_30);
+    lv_style_set_img_recolor(&greenPressedStyle, colorGreen);
+
+    lv_style_init(&textRobotoGreenStyle);
+    lv_style_set_text_font(&textRobotoGreenStyle, &roboto_14);
+
+    lv_style_set_text_color(&textRobotoGreenStyle, colorGreen);
+
+    lv_obj_add_style(mainScreen, &whiteBackground, LV_STATE_DEFAULT);
+
+    /*
      * Inizializzo bocca
      */
     lv_obj_t * teethContainer = lv_obj_create(mainScreen);
@@ -94,10 +120,47 @@ void app_create()
     lv_obj_add_style(teethContainer, &whiteBackground, LV_STATE_DEFAULT);
 
     lv_obj_t * rightLabel = lv_label_create(teethContainer);
-    lv_obj_set_align(rightLabel, LV_ALIGN_LEFT);
+    lv_obj_set_align(rightLabel, LV_ALIGN_LEFT_MID);
     lv_label_set_text(rightLabel, "R");
     lv_obj_add_style(rightLabel, &textRoboto24GreenStyle, LV_STATE_DEFAULT);
 
+    lv_obj_t * leftLabel = lv_label_create(teethContainer);
+    lv_obj_set_align(leftLabel, LV_ALIGN_RIGHT_MID);
+    lv_label_set_text(leftLabel, "L");
+    lv_obj_add_style(leftLabel, &textRoboto24GreenStyle, LV_STATE_DEFAULT);
+
+    dentalArcInit(teethContainer); // Inizializzo bocca
+    buttonsInit(teethContainer);   // Inizializzo bottoni
+
+    /* Inizializzo il bottone per il reset */
+    lv_obj_t * resetBtn = lv_img_create(mainScreen);
+    imgButtonSetUp(resetBtn, &resetbtn);
+
+    lv_coord_t dimReset = lv_obj_get_width(resetBtn) / 3;
+    lv_obj_align(resetBtn, LV_ALIGN_TOP_MID, dimReset, 25);
+    lv_obj_add_event_cb(resetBtn, reset_cb, LV_EVENT_CLICKED, NULL);
+    lv_obj_add_event_cb(resetBtn, deselectAllButtons, LV_EVENT_CLICKED, NULL);
+
+    lv_obj_add_style(resetBtn, &buttonPressedStyle, LV_STATE_PRESSED);
+
+    resetLabel = lv_label_create(resetBtn);
+    lv_obj_set_align(resetLabel, LV_ALIGN_CENTER);
+    lv_obj_add_style(resetLabel, &textRobotoStyle, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_label_set_text(resetLabel, "Reset");
+
+    /* Inizializzo container dati */
+    lv_obj_t * containerLaserData = lv_img_create(mainScreen);
+    lv_img_set_src(containerLaserData, &conteinerDati);
+    lv_img_set_zoom(containerLaserData, 90);
+    lv_img_set_size_mode(containerLaserData, LV_IMG_SIZE_MODE_REAL);
+
+    lv_obj_align(containerLaserData, LV_ALIGN_TOP_MID, -dimReset, 15);
+    lv_obj_set_size(containerLaserData, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
+
+    lv_obj_t * laserDataLabel = lv_label_create(containerLaserData);
+    lv_label_set_text(laserDataLabel, "70 kW - 10 mA");
+    lv_obj_add_style(laserDataLabel, &textRobotoGreenStyle, LV_STATE_DEFAULT);
+    lv_obj_set_align(laserDataLabel, LV_ALIGN_CENTER);
 
 
     
