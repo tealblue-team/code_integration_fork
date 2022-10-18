@@ -144,7 +144,7 @@ void app_create()
     resetLabel = lv_label_create(resetBtn);
     lv_obj_set_align(resetLabel, LV_ALIGN_CENTER);
     lv_obj_add_style(resetLabel, &textRobotoStyle, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_label_set_text(resetLabel, "Reset2");
+    lv_label_set_text(resetLabel, "Reset");
 
     /* Inizializzo container dati */
     lv_obj_t * containerLaserData = lv_img_create(mainScreen);
