@@ -135,7 +135,7 @@ void app_create()
     imgButtonSetUp(resetBtn, &resetbtn);
 
     lv_coord_t dimReset = lv_obj_get_width(resetBtn) / 3;
-    lv_obj_align(resetBtn, LV_ALIGN_TOP_MID, dimReset, 25);
+    lv_obj_align(resetBtn, LV_ALIGN_TOP_MID, dimReset, 30);
     lv_obj_add_event_cb(resetBtn, reset_cb, LV_EVENT_CLICKED, NULL);
     lv_obj_add_event_cb(resetBtn, deselectAllButtons, LV_EVENT_CLICKED, NULL);
 
