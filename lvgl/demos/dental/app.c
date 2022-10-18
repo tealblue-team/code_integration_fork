@@ -64,16 +64,14 @@ void app_create()
     widgetScreen = lv_tileview_add_tile(tileView, 1, 0, LV_DIR_LEFT);
 
 
-    lv_obj_set_size(mainScreen, 1280, 800);   
+    //lv_obj_set_size(mainScreen, 1280, 800);   
     lv_obj_clear_flag(mainScreen, LV_OBJ_FLAG_SCROLLABLE);
 
-    lv_obj_set_size(widgetScreen, 1280, 800);
+    //lv_obj_set_size(widgetScreen, 1280, 800);
     lv_obj_clear_flag(widgetScreen, LV_OBJ_FLAG_SCROLLABLE);
 
     widgetInit(widgetScreen);
     lv_obj_add_event_cb(tileView, tileSwipe_cb, LV_EVENT_VALUE_CHANGED, NULL);
-
-
 
 
    /*
