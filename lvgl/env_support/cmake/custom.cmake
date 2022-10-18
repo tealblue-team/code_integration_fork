@@ -21,13 +21,13 @@ file(GLOB_RECURSE DEMO_SOURCES ${LVGL_ROOT_DIR}/demos/*.c)
 if (BUILD_SHARED_LIBS)
   add_library(lvgl SHARED ${SOURCES})
 else()
-  add_library(lvgl STATIC ${SOURCES})
+  add_library(lvgl STATIC ${SOURCES} "../../demos/dental/app.h")
 endif()
 
 add_library(lvgl::lvgl ALIAS lvgl)
-add_library(lvgl_examples STATIC ${EXAMPLE_SOURCES})
+add_library(lvgl_examples STATIC ${EXAMPLE_SOURCES} "../../demos/dental/app.h")
 add_library(lvgl::examples ALIAS lvgl_examples)
-add_library(lvgl_demos STATIC ${DEMO_SOURCES})
+add_library(lvgl_demos STATIC ${DEMO_SOURCES} "../../demos/dental/app.h")
 add_library(lvgl::demos ALIAS lvgl_demos)
 
 target_compile_definitions(

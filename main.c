@@ -51,7 +51,10 @@ int main(void)
 
 
     /*Create a Demo*/
-    lv_demo_widgets();
+    //lv_demo_widgets();
+    app_create();
+
+
 
     /*Handle LitlevGL tasks (tickless mode)*/
     while(1) {
