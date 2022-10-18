@@ -104,7 +104,7 @@ void app_create()
 
     lv_style_set_text_color(&textRobotoGreenStyle, colorGreen);
 
-    //lv_obj_add_style(mainScreen, &whiteBackground, LV_STATE_DEFAULT);
+    lv_obj_add_style(mainScreen, &whiteBackground, LV_STATE_DEFAULT);
 
     /*
      * Inizializzo bocca
