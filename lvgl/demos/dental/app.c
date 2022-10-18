@@ -134,7 +134,7 @@ void app_create()
     lv_obj_t * resetBtn = lv_img_create(mainScreen);
     imgButtonSetUp(resetBtn, &resetbtn);
 
-    lv_coord_t dimReset = lv_obj_get_width(resetBtn) / 3;
+    lv_coord_t dimReset = lv_obj_get_width(resetBtn) / 2;
     lv_obj_align(resetBtn, LV_ALIGN_TOP_MID, dimReset, 25);
     lv_obj_add_event_cb(resetBtn, reset_cb, LV_EVENT_CLICKED, NULL);
     lv_obj_add_event_cb(resetBtn, deselectAllButtons, LV_EVENT_CLICKED, NULL);
@@ -144,7 +144,7 @@ void app_create()
     resetLabel = lv_label_create(resetBtn);
     lv_obj_set_align(resetLabel, LV_ALIGN_CENTER);
     lv_obj_add_style(resetLabel, &textRobotoStyle, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_label_set_text(resetLabel, "Reset");
+    lv_label_set_text(resetLabel, "Reset2");
 
     /* Inizializzo container dati */
     lv_obj_t * containerLaserData = lv_img_create(mainScreen);
