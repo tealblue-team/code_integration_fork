@@ -59,7 +59,7 @@ void tileSwipe_cb(lv_event_t* e) {
 void app_create()
 {
     
-    tileView     = lv_tileview_create(NULL);
+    tileView     = lv_tileview_create(lv_scr_act());
     mainScreen   = lv_tileview_add_tile(tileView, 0, 0, LV_DIR_RIGHT);
     widgetScreen = lv_tileview_add_tile(tileView, 1, 0, LV_DIR_LEFT);
 
