@@ -10,8 +10,8 @@ extern "C" {
  **********************/
 
 #include "../../lvgl.h"
-#include "dentalArc.h"
 #include "selectButtons.h"
+#include "dentalArc.h"
 #include "widgetDemo.h"
 
 /**********************

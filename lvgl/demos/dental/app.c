@@ -127,8 +127,8 @@ void app_create()
     lv_label_set_text(leftLabel, "L");
     lv_obj_add_style(leftLabel, &textRoboto24GreenStyle, LV_STATE_DEFAULT);
 
-    dentalArcInit(teethContainer); // Inizializzo bocca
-    buttonsInit(teethContainer);   // Inizializzo bottoni
+    //dentalArcInit(teethContainer); // Inizializzo bocca
+    //buttonsInit(teethContainer);   // Inizializzo bottoni
 
     /* Inizializzo il bottone per il reset */
     lv_obj_t * resetBtn = lv_img_create(mainScreen);
@@ -163,14 +163,3 @@ void app_create()
 
     
 }
-
-
-//void app_init_screen() {
-    //lv_disp_t* dispp = lv_disp_get_default();
-    //lv_theme_t* theme = lv_theme_default_init(dispp, lv_palette_main(LV_PALETTE_BLUE), lv_palette_main(LV_PALETTE_RED),false, LV_FONT_DEFAULT);
-    //lv_disp_set_theme(dispp, theme);
-
-
-    //app_create();
-    //lv_disp_load_scr(tileView);
-//}
