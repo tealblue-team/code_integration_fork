@@ -75,6 +75,8 @@ void app_create()
 
 
 
+
+    lv_color_t colorGreen = lv_color_hex(0x448300);
     lv_style_init(&whiteBackground);
     lv_style_set_bg_color(&whiteBackground, lv_color_white());
     lv_style_set_border_color(&whiteBackground, lv_color_white());
