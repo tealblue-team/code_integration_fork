@@ -40,6 +40,10 @@ void reset_cb(lv_event_t* e) {
         resetInitialChecked();
     }
 }
+void test_butt(lv_event_t* e)
+{
+    printf("Click!!");
+}
 
 static bool widgetMenuAttivo = false;
 void tileSwipe_cb(lv_event_t* e) {
@@ -67,11 +71,11 @@ void app_create()
     lv_obj_set_size(mainScreen, 1280, 800);   
     lv_obj_clear_flag(mainScreen, LV_OBJ_FLAG_SCROLLABLE);
 
-    //lv_obj_set_size(widgetScreen, 1280, 800);
-    //lv_obj_clear_flag(widgetScreen, LV_OBJ_FLAG_SCROLLABLE);
+    lv_obj_set_size(widgetScreen, 1280, 800);
+    lv_obj_clear_flag(widgetScreen, LV_OBJ_FLAG_SCROLLABLE);
 
-    //widgetInit(widgetScreen);
-    //lv_obj_add_event_cb(tileView, tileSwipe_cb, LV_EVENT_VALUE_CHANGED, NULL);
+    widgetInit(widgetScreen);
+    lv_obj_add_event_cb(tileView, tileSwipe_cb, LV_EVENT_VALUE_CHANGED, NULL);
 
 
    /*
@@ -134,7 +138,7 @@ void app_create()
     lv_obj_t * resetBtn = lv_img_create(mainScreen);
     imgButtonSetUp(resetBtn, &resetbtn);
 
-    lv_coord_t dimReset = lv_obj_get_width(resetBtn) / 2;
+    lv_coord_t dimReset = lv_obj_get_width(resetBtn) / 3;
     lv_obj_align(resetBtn, LV_ALIGN_TOP_MID, dimReset, 25);
     lv_obj_add_event_cb(resetBtn, reset_cb, LV_EVENT_CLICKED, NULL);
     lv_obj_add_event_cb(resetBtn, deselectAllButtons, LV_EVENT_CLICKED, NULL);
@@ -145,6 +149,7 @@ void app_create()
     lv_obj_set_align(resetLabel, LV_ALIGN_CENTER);
     lv_obj_add_style(resetLabel, &textRobotoStyle, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_label_set_text(resetLabel, "Reset2");
+    lv_obj_add_event_cb(resetBtn, test_butt, LV_EVENT_CLICKED, NULL);
 
     /* Inizializzo container dati */
     lv_obj_t * containerLaserData = lv_img_create(mainScreen);
