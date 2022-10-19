@@ -6,4 +6,3 @@ include $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/font/lv_font.mk
 include $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/hal/lv_hal.mk
 include $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/misc/lv_misc.mk
 include $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/widgets/lv_widgets.mk
-include $(LVGL_DIR)/$(LVGL_DIR_NAME)/demos/dental/dental.mk
