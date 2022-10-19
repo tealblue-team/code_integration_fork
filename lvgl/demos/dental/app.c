@@ -59,7 +59,7 @@ void app_create()
 {
     
     tileView     = lv_tileview_create(lv_scr_act());
-    lv_obj_align(tileView, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_align(tileView, LV_ALIGN_CENTER, 0, 0);
     mainScreen   = lv_tileview_add_tile(tileView, 0, 0, LV_DIR_RIGHT);
     widgetScreen = lv_tileview_add_tile(tileView, 1, 0, LV_DIR_LEFT);
 
