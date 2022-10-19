@@ -31,6 +31,7 @@ int main(void)
     disp_drv.flush_cb   = fbdev_flush;
     disp_drv.hor_res    = 1280;
     disp_drv.ver_res    = 800;
+    lv_obj_align(&disp_drv, NULL,LV_ALIGN_CENTER, 0, 0);
     lv_disp_drv_register(&disp_drv);
 
     evdev_init();
