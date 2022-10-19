@@ -60,7 +60,7 @@ set(LVGL_TEST_OPTIONS_NORMAL_8BIT
     -DLV_USE_BIDI=0
     -DLV_USE_ARABIC_PERSIAN_CHARS=0
     ${LVGL_TEST_COMMON_EXAMPLE_OPTIONS}
-    -DLV_FONT_DEFAULT=&lv_font_montserrat_14
+    -DLV_FONT_DEFAULT=&lv_font_montserrat_22
     -DLV_USE_PNG=1
     -DLV_USE_BMP=1
     -DLV_USE_SJPG=1
@@ -87,7 +87,7 @@ set(LVGL_TEST_OPTIONS_16BIT
     -DLV_USE_BIDI=0
     -DLV_USE_ARABIC_PERSIAN_CHARS=0
     ${LVGL_TEST_COMMON_EXAMPLE_OPTIONS}
-    -DLV_FONT_DEFAULT=&lv_font_montserrat_14
+    -DLV_FONT_DEFAULT=&lv_font_montserrat_22
     -DLV_USE_PNG=1
     -DLV_USE_BMP=1
     -DLV_USE_SJPG=1
@@ -116,7 +116,7 @@ set(LVGL_TEST_OPTIONS_16BIT_SWAP
     -DLV_USE_BIDI=0
     -DLV_USE_ARABIC_PERSIAN_CHARS=0
     ${LVGL_TEST_COMMON_EXAMPLE_OPTIONS}
-    -DLV_FONT_DEFAULT=&lv_font_montserrat_14
+    -DLV_FONT_DEFAULT=&lv_font_montserrat_22
     -DLV_USE_PNG=1
     -DLV_USE_BMP=1
     -DLV_USE_SJPG=1
@@ -237,7 +237,7 @@ set(LVGL_TEST_OPTIONS_TEST_COMMON
     -DLV_FS_POSIX_LETTER='B'
     -DLV_FS_POSIX_CACHE_SIZE=0
     ${LVGL_TEST_COMMON_EXAMPLE_OPTIONS}
-    -DLV_FONT_DEFAULT=&lv_font_montserrat_14
+    -DLV_FONT_DEFAULT=&lv_font_montserrat_22
     -Wno-unused-but-set-variable # unused variables are common in the dual-heap arrangement
     -Wno-unused-variable
 )
