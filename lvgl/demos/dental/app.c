@@ -120,12 +120,12 @@ void app_create()
     lv_obj_add_style(teethContainer, &whiteBackground, LV_STATE_DEFAULT);
 
     lv_obj_t * rightLabel = lv_label_create(teethContainer);
-    lv_obj_set_align(rightLabel, LV_ALIGN_LEFT_MID, 16, 36);
+    lv_obj_set_align(rightLabel, LV_ALIGN_LEFT_MID);
     lv_label_set_text(rightLabel, "R");
     lv_obj_add_style(rightLabel, &textRoboto24GreenStyle, LV_STATE_DEFAULT);
 
     lv_obj_t * leftLabel = lv_label_create(teethContainer);
-    lv_obj_set_align(leftLabel, LV_ALIGN_RIGHT_MID, 16 , 36);
+    lv_obj_set_align(leftLabel, LV_ALIGN_RIGHT_MID);
     lv_label_set_text(leftLabel, "L");
     lv_obj_add_style(leftLabel, &textRoboto24GreenStyle, LV_STATE_DEFAULT);
 
