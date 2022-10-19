@@ -39,7 +39,8 @@ int main(void)
     indev_drv_1.type = LV_INDEV_TYPE_POINTER;
 
     /*This function will be called periodically (by the library) to get the mouse position and state*/
-
+    indev_drv_1.read_cb      = evdev_read;
+    lv_indev_t * mouse_indev = lv_indev_drv_register(&indev_drv_1);
 
     /*Set a cursor for the mouse*/
     //LV_IMG_DECLARE(mouse_cursor_icon)
