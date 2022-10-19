@@ -64,11 +64,11 @@ void app_create()
 
 
     lv_obj_set_size(mainScreen, 800, 480);
-    lv_obj_align(mainScreen, LV_ALIGN_CENTER, 0, 0);
+    //lv_obj_align(mainScreen, LV_ALIGN_CENTER, 0, 0);
     lv_obj_clear_flag(mainScreen, LV_OBJ_FLAG_SCROLLABLE);
 
     lv_obj_set_size(widgetScreen, 800, 480);
-    lv_obj_align(widgetScreen, LV_ALIGN_CENTER, 0, 0);
+    //lv_obj_align(widgetScreen, LV_ALIGN_CENTER, 0, 0);
     lv_obj_clear_flag(widgetScreen, LV_OBJ_FLAG_SCROLLABLE);
 
     widgetInit(widgetScreen);
