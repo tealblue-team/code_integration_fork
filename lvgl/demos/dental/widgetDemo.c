@@ -444,7 +444,7 @@ void initSettingsMenu(lv_obj_t* parent) {
     const char* opts = "Small\nMedium\nLarge\nExtralarge";
     static lv_style_t style_sel;
     lv_style_init(&style_sel);
-    lv_style_set_text_font(&style_sel, &lv_font_montserrat_14);
+    lv_style_set_text_font(&style_sel, &lv_font_montserrat_22);
     lv_obj_t* roller = lv_roller_create(cont);
     lv_roller_set_options(roller, opts, LV_ROLLER_MODE_NORMAL);
     lv_roller_set_visible_row_count(roller, 2);
