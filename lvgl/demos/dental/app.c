@@ -63,8 +63,6 @@ void tileSwipe_cb(lv_event_t* e) {
 
 void app_create()
 {
-    // Add constant
-    //
 
     tileView = lv_tileview_create(lv_scr_act());
     lv_obj_set_size(tileView, Width_screen, Height_screen);
@@ -139,12 +137,12 @@ void app_create()
     dentalArcInit(teethContainer); // Inizializzo bocca
     buttonsInit(teethContainer);   // Inizializzo bottoni
 
-    /* Inizializzo il bottone per il reset */
+   /* Inizializzo il bottone per il reset */
     lv_obj_t * resetBtn = lv_img_create(mainScreen);
     imgButtonSetUp(resetBtn, &resetbtn);
 
     lv_coord_t dimReset = lv_obj_get_width(resetBtn) / 3;
-    lv_obj_align(resetBtn, LV_ALIGN_TOP_MID, dimReset, 20);
+    lv_obj_align(resetBtn, LV_ALIGN_TOP_MID, dimReset, 25);
     lv_obj_add_event_cb(resetBtn, reset_cb, LV_EVENT_CLICKED, NULL);
     lv_obj_add_event_cb(resetBtn, deselectAllButtons, LV_EVENT_CLICKED, NULL);
 
@@ -155,32 +153,18 @@ void app_create()
     lv_obj_add_style(resetLabel, &textRobotoStyle, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_label_set_text(resetLabel, "Reset");
 
-    /* lv_obj_t * cont_Butt_Lab = lv_label_create(mainScreen);
-    lv_obj_set_align(cont_Butt_Lab, LV_ALIGN_TOP_MID);
-
-    lv_obj_t * resetBtn = lv_label_create(cont_Butt_Lab);
-    imgButtonSetUp(resetBtn, &resetbtn);
-    lv_obj_set_align(resetBtn, LV_ALIGN_RIGHT_MID);
-    lv_obj_add_event_cb(resetBtn, reset_cb, LV_EVENT_CLICKED, NULL);
-    lv_obj_add_event_cb(resetBtn, deselectAllButtons, LV_EVENT_CLICKED, NULL);
-    lv_obj_add_style(resetBtn, &buttonPressedStyle, LV_STATE_PRESSED);
-    resetLabel = lv_label_create(resetBtn);
-    lv_obj_set_align(resetLabel, LV_ALIGN_CENTER);
-    lv_obj_add_style(resetLabel, &textRobotoStyle, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_label_set_text(resetLabel, "Reset");*/
-
-
     /* Inizializzo container dati */
     lv_obj_t * containerLaserData = lv_img_create(mainScreen);
     lv_img_set_src(containerLaserData, &conteinerDati);
     lv_img_set_zoom(containerLaserData, 90);
     lv_img_set_size_mode(containerLaserData, LV_IMG_SIZE_MODE_REAL);
+
     lv_obj_align(containerLaserData, LV_ALIGN_TOP_MID, -dimReset, 15);
     lv_obj_set_size(containerLaserData, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
 
     lv_obj_t * laserDataLabel = lv_label_create(containerLaserData);
     lv_label_set_text(laserDataLabel, "70 kW - 10 mA");
     lv_obj_add_style(laserDataLabel, &textRobotoGreenStyle, LV_STATE_DEFAULT);
-    lv_obj_set_align(laserDataLabel, LV_ALIGN_LEFT_MID);
+    lv_obj_set_align(laserDataLabel, LV_ALIGN_CENTER);
     
 }
