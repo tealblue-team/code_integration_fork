@@ -159,12 +159,12 @@ void app_create()
 
     lv_obj_t * resetBtn = lv_label_create(teethContainer);
     imgButtonSetUp(resetBtn, &resetbtn);
-    lv_obj_set_align(resetBtn, LV_ALIGN_TOP_LEFT);
+    lv_obj_set_align(resetBtn, LV_ALIGN_CENTER);
     lv_obj_add_event_cb(resetBtn, reset_cb, LV_EVENT_CLICKED, NULL);
     lv_obj_add_event_cb(resetBtn, deselectAllButtons, LV_EVENT_CLICKED, NULL);
     lv_obj_add_style(resetBtn, &buttonPressedStyle, LV_STATE_PRESSED);
     resetLabel = lv_label_create(resetBtn);
-    lv_obj_set_align(resetLabel, LV_ALIGN_CENTER);
+    lv_obj_set_align(resetLabel, LV_ALIGN_TOP_RIGHT);
     lv_obj_add_style(resetLabel, &textRobotoStyle, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_label_set_text(resetLabel, "Reset");
 
