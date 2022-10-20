@@ -157,7 +157,7 @@ void app_create()
     lv_obj_add_style(resetLabel, &textRobotoStyle, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_label_set_text(resetLabel, "Reset");*/
 
-    lv_obj_t * cont_Butt_Lab = lv_laber_create(teethContainer);
+    lv_obj_t * cont_Butt_Lab = lv_label_create(teethContainer);
     lv_obj_set_align(cont_Butt_Lab, LV_ALIGN_TOP_MID);
 
     lv_obj_t * resetBtn = lv_label_create(cont_Butt_Lab);
