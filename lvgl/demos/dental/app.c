@@ -121,7 +121,7 @@ void app_create()
     lv_obj_t * teethContainer = lv_obj_create(mainScreen);
 
     lv_obj_align(teethContainer, LV_ALIGN_CENTER, 0, 0);
-    lv_obj_set_size(teethContainer, lv_pct(80), lv_pct(78));
+    lv_obj_set_size(teethContainer, lv_pct(75), lv_pct(70));
     lv_obj_clear_flag(teethContainer, LV_OBJ_FLAG_SCROLLABLE);
     lv_obj_add_style(teethContainer, &whiteBackground, LV_STATE_DEFAULT);
 
