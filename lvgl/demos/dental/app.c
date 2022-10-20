@@ -12,6 +12,11 @@ static lv_style_t textRobotoGreenStyle;
 static lv_style_t whiteBackground;
 lv_style_t greenPressedStyle;
 const int zoomFactor = 90; // fattore di zoom per le immagini: 256 è senza zoom, >256= immagine più grande, <256 inmmagine più piccola
+//This two const variables represent height and width of the main screen
+//inherited from the active display
+const int Width_screen = 800;
+const int Height_screen = 480;
+
 
 lv_obj_t* resetLabel;
 lv_obj_t* tileView;
@@ -57,18 +62,20 @@ void tileSwipe_cb(lv_event_t* e) {
 
 void app_create()
 {
-    
+    //Add constant
+    //
+
     tileView     = lv_tileview_create(lv_scr_act());
-    lv_obj_set_size(tileView, 800, 480);
+    lv_obj_set_size(tileView, Width_screen, Height_screen);
     lv_obj_align(tileView, LV_ALIGN_CENTER, 0, 0);
     mainScreen   = lv_tileview_add_tile(tileView, 0, 0, LV_DIR_RIGHT);
     widgetScreen = lv_tileview_add_tile(tileView, 1, 0, LV_DIR_LEFT);
 
 
-    lv_obj_set_size(mainScreen, 800, 480);
+    lv_obj_set_size(mainScreen, Width_screen, Height_screen);
     lv_obj_clear_flag(mainScreen, LV_OBJ_FLAG_SCROLLABLE);
 
-    lv_obj_set_size(widgetScreen, 800, 480);
+    lv_obj_set_size(widgetScreen, Width_screen, Height_screen);
     lv_obj_clear_flag(widgetScreen, LV_OBJ_FLAG_SCROLLABLE);
 
     widgetInit(widgetScreen);
@@ -114,22 +121,19 @@ void app_create()
     lv_obj_t * teethContainer = lv_obj_create(mainScreen);
 
     lv_obj_align(teethContainer, LV_ALIGN_CENTER, 0, 0);
-    //lv_obj_set_size(teethContainer, lv_pct(95), lv_pct(90));
-    lv_obj_set_size(teethContainer, 640, 380);
+    lv_obj_set_size(teethContainer, lv_pct(65), lv_pct(60));
     lv_obj_clear_flag(teethContainer, LV_OBJ_FLAG_SCROLLABLE);
     lv_obj_add_style(teethContainer, &whiteBackground, LV_STATE_DEFAULT);
 
-    lv_obj_t * rightLabel = lv_label_create(mainScreen);
+    lv_obj_t * rightLabel = lv_label_create(teethContainer);
     lv_obj_set_align(rightLabel, LV_ALIGN_LEFT_MID);
     lv_label_set_text(rightLabel, "R");
-    lv_obj_set_size(rightLabel, 16, 36);
-    lv_obj_add_style(rightLabel, &textRobotoGreenStyle, LV_STATE_DEFAULT);
+    lv_obj_add_style(rightLabel, &textRoboto24GreenStyle, LV_STATE_DEFAULT);
 
-    lv_obj_t * leftLabel = lv_label_create(mainScreen);
+    lv_obj_t * leftLabel = lv_label_create(teethContainer);
     lv_obj_set_align(leftLabel, LV_ALIGN_RIGHT_MID);
     lv_label_set_text(leftLabel, "L");
-    lv_obj_set_size(rightLabel, 16, 36);
-    lv_obj_add_style(leftLabel, &textRobotoGreenStyle, LV_STATE_DEFAULT);
+    lv_obj_add_style(leftLabel, &textRoboto24GreenStyle, LV_STATE_DEFAULT);
 
     dentalArcInit(teethContainer); // Inizializzo bocca
     buttonsInit(teethContainer);   // Inizializzo bottoni
