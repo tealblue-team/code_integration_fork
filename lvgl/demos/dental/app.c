@@ -141,7 +141,7 @@ void app_create()
     buttonsInit(teethContainer);   // Inizializzo bottoni
 
     /* Inizializzo il bottone per il reset */
-    /* lv_obj_t * resetBtn = lv_img_create(mainScreen);
+    /*lv_obj_t * resetBtn = lv_img_create(mainScreen);
     imgButtonSetUp(resetBtn, &resetbtn);
 
     lv_coord_t dimReset = lv_obj_get_width(resetBtn) / 3;
@@ -170,7 +170,7 @@ void app_create()
 
 
     /* Inizializzo container dati */
-    lv_obj_t * containerLaserData = lv_img_create(resetBtn);
+    lv_obj_t * containerLaserData = lv_img_create(mainteethContainerScreen);
     lv_img_set_src(containerLaserData, &conteinerDati);
     lv_img_set_zoom(containerLaserData, 90);
     lv_img_set_size_mode(containerLaserData, LV_IMG_SIZE_MODE_REAL);
@@ -181,7 +181,7 @@ void app_create()
     lv_obj_t * laserDataLabel = lv_label_create(containerLaserData);
     lv_label_set_text(laserDataLabel, "70 kW - 10 mA");
     lv_obj_add_style(laserDataLabel, &textRobotoGreenStyle, LV_STATE_DEFAULT);
-    lv_obj_set_align(laserDataLabel, LV_ALIGN_CENTER);
+    lv_obj_set_align(laserDataLabel, LV_ALIGN_TOP_MID);
 
 
     
