@@ -63,15 +63,14 @@ void tileSwipe_cb(lv_event_t* e) {
 
 void app_create()
 {
-    //Add constant
+    // Add constant
     //
 
-    tileView     = lv_tileview_create(lv_scr_act());
+    tileView = lv_tileview_create(lv_scr_act());
     lv_obj_set_size(tileView, Width_screen, Height_screen);
     lv_obj_align(tileView, LV_ALIGN_CENTER, 0, 0);
     mainScreen   = lv_tileview_add_tile(tileView, 0, 0, LV_DIR_RIGHT);
     widgetScreen = lv_tileview_add_tile(tileView, 1, 0, LV_DIR_LEFT);
-
 
     lv_obj_set_size(mainScreen, Width_screen, Height_screen);
     lv_obj_clear_flag(mainScreen, LV_OBJ_FLAG_SCROLLABLE);
@@ -82,12 +81,11 @@ void app_create()
     widgetInit(widgetScreen);
     lv_obj_add_event_cb(tileView, tileSwipe_cb, LV_EVENT_VALUE_CHANGED, NULL);
 
-
-   /*
+    /*
      * Inizializzo gli stili
      */
-    lv_color_t colorGreen = lv_color_hex(0x448300);  //Green in RGB
-    lv_color_t colorOrange = lv_color_hex(0xedbb3b); //Arancio
+    lv_color_t colorGreen  = lv_color_hex(0x448300); // Green in RGB
+    lv_color_t colorOrange = lv_color_hex(0xedbb3b); // Arancio
 
     lv_style_init(&whiteBackground);
     lv_style_set_bg_color(&whiteBackground, lv_color_white());
@@ -178,11 +176,12 @@ void app_create()
     lv_img_set_zoom(containerLaserData, 90);
     lv_img_set_size_mode(containerLaserData, LV_IMG_SIZE_MODE_REAL);
 
-    //lv_obj_align(containerLaserData, LV_ALIGN_TOP_MID, -dimReset, 15);
+    // lv_obj_align(containerLaserData, LV_ALIGN_TOP_MID, -dimReset, 15);
     lv_obj_set_size(containerLaserData, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
 
     lv_obj_t * laserDataLabel = lv_label_create(cont_Butt_Lab);
     lv_label_set_text(laserDataLabel, "70 kW - 10 mA");
     lv_obj_add_style(laserDataLabel, &textRobotoGreenStyle, LV_STATE_DEFAULT);
-    lv_obj_set_align(laserDataLabel, LV_ALIGN_LEFT_MID);*
+    lv_obj_set_align(laserDataLabel, LV_ALIGN_LEFT_MID);
+    
 }
