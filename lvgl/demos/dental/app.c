@@ -22,7 +22,7 @@ lv_obj_t* resetLabel;
 lv_obj_t* tileView;
 lv_obj_t* mainScreen;
 lv_obj_t* widgetScreen;
-lv_obj_t * cont_Butt_Lab; // Contains button and laberl 
+//lv_obj_t * cont_Butt_Lab; // Contains button and laberl 
 
 /* Risorse in file .c*/
 extern lv_font_t roboto_14;
@@ -175,8 +175,7 @@ void app_create()
     lv_img_set_src(containerLaserData, &conteinerDati);
     lv_img_set_zoom(containerLaserData, 90);
     lv_img_set_size_mode(containerLaserData, LV_IMG_SIZE_MODE_REAL);
-
-    // lv_obj_align(containerLaserData, LV_ALIGN_TOP_MID, -dimReset, 15);
+    lv_obj_align(containerLaserData, LV_ALIGN_TOP_MID, -dimReset, 15);
     lv_obj_set_size(containerLaserData, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
 
     lv_obj_t * laserDataLabel = lv_label_create(cont_Butt_Lab);
