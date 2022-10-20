@@ -138,7 +138,7 @@ void app_create()
     buttonsInit(teethContainer);   // Inizializzo bottoni
 
    /* Inizializzo il bottone per il reset */
-    lv_obj_t * resetBtn = lv_img_create(mainScreen);
+    lv_obj_t * resetBtn = lv_img_create(teethContainer);
     imgButtonSetUp(resetBtn, &resetbtn);
 
     lv_coord_t dimReset = lv_obj_get_width(resetBtn) / 3;
