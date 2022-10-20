@@ -182,6 +182,6 @@ void app_create()
     lv_obj_t * laserDataLabel = lv_label_create(cont_Butt_Lab);
     lv_label_set_text(laserDataLabel, "70 kW - 10 mA");
     lv_obj_add_style(laserDataLabel, &textRobotoGreenStyle, LV_STATE_DEFAULT);
-    lv_obj_set_align(laserDataLabel, LV_ALIGN_LEFT_MID);*/
+    lv_obj_set_align(laserDataLabel, LV_ALIGN_LEFT_MID);
     
 }
