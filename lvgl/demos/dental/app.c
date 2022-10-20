@@ -171,7 +171,7 @@ void app_create()
 
 
     /* Inizializzo container dati */
-    /* lv_obj_t * containerLaserData = lv_img_create(mainScreen);
+    lv_obj_t * containerLaserData = lv_img_create(cont_Butt_Lab);
     lv_img_set_src(containerLaserData, &conteinerDati);
     lv_img_set_zoom(containerLaserData, 90);
     lv_img_set_size_mode(containerLaserData, LV_IMG_SIZE_MODE_REAL);
