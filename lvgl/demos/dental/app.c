@@ -22,6 +22,7 @@ lv_obj_t* resetLabel;
 lv_obj_t* tileView;
 lv_obj_t* mainScreen;
 lv_obj_t* widgetScreen;
+lv_obj_t* cont_Butt_Lab //Contains button and laberl 
 
 /* Risorse in file .c*/
 extern lv_font_t roboto_14;
@@ -156,10 +157,12 @@ void app_create()
     lv_obj_add_style(resetLabel, &textRobotoStyle, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_label_set_text(resetLabel, "Reset");*/
 
+    lv_obj_t * cont_Butt_Lab = lv_laber_create(teethContainer);
+    lv_obj_set_align(cont_Butt_Lab, LV_ALIGN_TOP_MID);
 
-    lv_obj_t * resetBtn = lv_label_create(teethContainer);
+    lv_obj_t * resetBtn = lv_label_create(cont_Butt_Lab);
     imgButtonSetUp(resetBtn, &resetbtn);
-    lv_obj_set_align(resetBtn, LV_ALIGN_TOP_MID);
+    lv_obj_set_align(resetBtn, LV_ALIGN_LEFT);
     lv_obj_add_event_cb(resetBtn, reset_cb, LV_EVENT_CLICKED, NULL);
     lv_obj_add_event_cb(resetBtn, deselectAllButtons, LV_EVENT_CLICKED, NULL);
     lv_obj_add_style(resetBtn, &buttonPressedStyle, LV_STATE_PRESSED);
@@ -178,11 +181,8 @@ void app_create()
     //lv_obj_align(containerLaserData, LV_ALIGN_TOP_MID, -dimReset, 15);
     lv_obj_set_size(containerLaserData, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
 
-    lv_obj_t * laserDataLabel = lv_label_create(containerLaserData);
+    lv_obj_t * laserDataLabel = lv_label_create(cont_Butt_Lab);
     lv_label_set_text(laserDataLabel, "70 kW - 10 mA");
     lv_obj_add_style(laserDataLabel, &textRobotoGreenStyle, LV_STATE_DEFAULT);
-    lv_obj_set_align(laserDataLabel, LV_ALIGN_TOP_MID);
-
-
-    
+    lv_obj_set_align(laserDataLabel, LV_ALIGN_RIGHT);
 }
