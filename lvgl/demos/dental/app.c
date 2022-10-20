@@ -160,7 +160,7 @@ void app_create()
 
     lv_obj_t * resetBtn = lv_label_create(cont_Butt_Lab);
     imgButtonSetUp(resetBtn, &resetbtn);
-    lv_obj_set_align(resetBtn, LV_ALIGN_RIGHT);
+    lv_obj_set_align(resetBtn, LV_ALIGN_RIGHT_MID);
     lv_obj_add_event_cb(resetBtn, reset_cb, LV_EVENT_CLICKED, NULL);
     lv_obj_add_event_cb(resetBtn, deselectAllButtons, LV_EVENT_CLICKED, NULL);
     lv_obj_add_style(resetBtn, &buttonPressedStyle, LV_STATE_PRESSED);
@@ -182,6 +182,6 @@ void app_create()
     lv_obj_t * laserDataLabel = lv_label_create(cont_Butt_Lab);
     lv_label_set_text(laserDataLabel, "70 kW - 10 mA");
     lv_obj_add_style(laserDataLabel, &textRobotoGreenStyle, LV_STATE_DEFAULT);
-    lv_obj_set_align(laserDataLabel, LV_ALIGN_LEFT);
+    lv_obj_set_align(laserDataLabel, LV_ALIGN_LEFT_MID);
     
 }
