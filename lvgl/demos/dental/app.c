@@ -22,7 +22,7 @@ lv_obj_t* resetLabel;
 lv_obj_t* tileView;
 lv_obj_t* mainScreen;
 lv_obj_t* widgetScreen;
-lv_obj_t* cont_Butt_Lab //Contains button and laberl 
+lv_obj_t * cont_Butt_Lab; // Contains button and laberl 
 
 /* Risorse in file .c*/
 extern lv_font_t roboto_14;
