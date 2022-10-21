@@ -192,6 +192,11 @@ void select_central_part(lv_event_t * e){
             else
                 lv_obj_clear_state(dentalGroupsArray[i], LV_STATE_CHECKED);
         }
+    } else {
+        lv_obj_clear_state(target, LV_STATE_CHECKED);
+        for(int i = 1; i < NUMDENTALGROUPS - 1; i++) {
+            lv_obj_clear_state(dentalGroupsArray[i], LV_STATE_CHECKED);
+        }
     }
 }
 
