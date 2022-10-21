@@ -22,7 +22,7 @@ extern lv_img_dsc_t dentalArcTopMiddleRightImg;
 
 static lv_style_t greenPressedStyle;
 
-static bool initialized = true;
+static bool initialized = false;
 
 /* Puntatori ai gruppi dentali*/
 lv_obj_t* leftMostTeeth; //0
@@ -123,7 +123,7 @@ void createDentalGroup(lv_obj_t* dentalGroup, lv_img_dsc_t* imgDesc) {
     lv_img_set_size_mode(dentalGroup, LV_IMG_SIZE_MODE_REAL);
     lv_obj_set_size(dentalGroup, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
     lv_obj_add_flag(dentalGroup, LV_OBJ_FLAG_CHECKABLE);
-    lv_obj_add_style(dentalGroup, &greenPressedStyle, LV_STATE_CHECKED);
+    //lv_obj_add_style(dentalGroup, &greenPressedStyle, LV_STATE_CHECKED);
 }
 
 /*
