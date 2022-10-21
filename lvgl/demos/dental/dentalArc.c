@@ -107,6 +107,7 @@ void dentalArcInit(lv_obj_t* parent) {
         dentalGroupsArray[9] = dentalArcRightMost;
 
         setUpCallbackBtnReset();
+        resetInitialChecked();
         initialized = true;
     }
 }
