@@ -14,7 +14,6 @@ extern lv_style_t greenPressedStyle;
 
 /* Puntatore ai bottoni*/
 lv_obj_t* topSelectionButton;
-lv_obj_t * topSelectionButtonImg_2;
 lv_obj_t* BottomMidSelectionButton;
 lv_obj_t* BottomLeftSelectionButton;
 lv_obj_t* BottomRightSelectionButton;
@@ -80,16 +79,21 @@ void buttonsInit(lv_obj_t* parent) {
     lv_coord_t botSelectBtnPos = lv_obj_get_width(parent) * 0.18;
 
 
-    topSelectionButton_2 = lv_img_create(topSelectionButton);
-    imgButtonSetUp(topSelectionButton_2, &topSelectionButtonImg);
-    lv_obj_align(topSelectionButton_2, LV_ALIGN_TOP_MID, 0, 15);
-    lv_obj_add_flag(topSelectionButton_2, LV_OBJ_FLAG_CHECKABLE);
-    lv_obj_clear_state(topSelectionButton_2, LV_STATE_CHECKED);
-    lv_obj_add_style(topSelectionButton_2, &greenPressedStyle, LV_STATE_CHECKED);
-    lv_obj_add_event_cb(topSelectionButton_2, topSelectionChecked, LV_EVENT_VALUE_CHANGED,NULL); // collego evento a funzione di callback
-    lv_obj_add_event_cb(topSelectionButton_2, deselectAllOtherButtons, LV_EVENT_VALUE_CHANGED, NULL);
-    lv_obj_add_event_cb(topSelectionButton_2, isOnBtnAreaCentered, LV_EVENT_ALL, NULL);
-    
+    topSelectionButton = lv_img_create(topSelectionButton);
+    imgButtonSetUp(topSelectionButton, &topSelectionButtonImg);
+    lv_obj_align(topSelectionButton, LV_ALIGN_TOP_MID, 0, 15);
+    lv_obj_add_flag(topSelectionButton, LV_OBJ_FLAG_CHECKABLE);
+    lv_obj_clear_state(topSelectionButton, LV_STATE_CHECKED);
+    lv_obj_add_style(topSelectionButton, &greenPressedStyle, LV_STATE_CHECKED);
+    lv_obj_add_event_cb(topSelectionButton, topSelectionChecked, LV_EVENT_VALUE_CHANGED,
+                        NULL); // collego evento a funzione di callback
+    lv_obj_add_event_cb(topSelectionButton, deselectAllOtherButtons, LV_EVENT_VALUE_CHANGED, NULL);
+    lv_obj_add_event_cb(topSelectionButton, isOnBtnAreaCentered, LV_EVENT_ALL, NULL);
+
+    lv_coord_t botSelectBtnPos = lv_obj_get_width(parent) * 0.30;
+
+
+
     BottomMidSelectionButton = lv_img_create(parent);
     imgButtonSetUp(BottomMidSelectionButton, &BottomMidSelectionButtonImg);
     lv_obj_align(BottomMidSelectionButton, LV_ALIGN_BOTTOM_MID, 0, 15);
