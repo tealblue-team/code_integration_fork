@@ -182,17 +182,19 @@ void select_central_part(lv_event_t * e){
     lv_state_t state  = lv_obj_get_state(target);
 
     if(initialized) {
-        for(int i = 0; i < NUMDENTALGROUPS; i++) {
-            if(i == 2 || i == 3 || i == 6 || i == 7)
-                lv_obj_add_state(dentalGroupsArray[i], LV_STATE_CHECKED);
-            else
+        if(state % 2 != 0) {
+            for(int i = 0; i < NUMDENTALGROUPS; i++) {
+                if(i == 2 || i == 3 || i == 6 || i == 7)
+                    lv_obj_add_state(dentalGroupsArray[i], LV_STATE_CHECKED);
+                else
+                    lv_obj_clear_state(dentalGroupsArray[i], LV_STATE_CHECKED);
+            }
+        } else{
+            lv_obj_clear_state(target, LV_STATE_CHECKED);
+            for(int i = 1; i < NUMDENTALGROUPS - 1; i++) {
                 lv_obj_clear_state(dentalGroupsArray[i], LV_STATE_CHECKED);
-        }
-    } else {
-        lv_obj_clear_state(target, LV_STATE_CHECKED);
-        for(int i = 1; i < NUMDENTALGROUPS - 1; i++) {
-            if(i == 2 || i == 3 || i == 6 || i == 7)
-                lv_obj_clear_state(dentalGroupsArray[i], LV_STATE_CHECKED);
+            }
+
         }
     }
 }
