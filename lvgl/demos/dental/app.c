@@ -11,7 +11,7 @@ static lv_style_t textRoboto24GreenStyle;
 static lv_style_t textRobotoGreenStyle;
 static lv_style_t whiteBackground;
 lv_style_t greenPressedStyle;
-const int zoomFactor = 80; // fattore di zoom per le immagini: 256 è senza zoom, >256= immagine più grande, <256 inmmagine più piccola
+const int zoomFactor = 90; // fattore di zoom per le immagini: 256 è senza zoom, >256= immagine più grande, <256 inmmagine più piccola
 //This two const variables represent height and width of the main screen
 //inherited from the active display
 const int Width_screen = 800;
