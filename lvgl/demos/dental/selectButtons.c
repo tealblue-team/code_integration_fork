@@ -70,7 +70,7 @@ void buttonsInit(lv_obj_t* parent) {
 
     topSelectionButton = lv_img_create(parent);
     imgButtonSetUp(topSelectionButton, &topSelectionButtonImg);
-    lv_obj_align(topSelectionButton, LV_ALIGN_TOP_MID, 0, 25);
+    lv_obj_align(topSelectionButton, LV_ALIGN_TOP_MID, 0, 22);
     lv_obj_add_flag(topSelectionButton, LV_OBJ_FLAG_CHECKABLE);
     lv_obj_clear_state(topSelectionButton, LV_STATE_CHECKED);
     lv_obj_add_style(topSelectionButton, &greenPressedStyle, LV_STATE_CHECKED);
@@ -83,7 +83,7 @@ void buttonsInit(lv_obj_t* parent) {
 
     topSeleButton_2 = lv_img_create(parent);
     imgButtonSetUp(topSeleButton_2, &topSelectionButtonImg);
-    lv_obj_align(topSeleButton_2, LV_ALIGN_CENTER, 0, -125);
+    lv_obj_align(topSeleButton_2, LV_ALIGN_CENTER, 0, -127);
     lv_obj_add_flag(topSeleButton_2, LV_OBJ_FLAG_CHECKABLE);
     lv_obj_clear_state(topSeleButton_2, LV_STATE_CHECKED);
     lv_obj_add_style(topSeleButton_2, &greenPressedStyle, LV_STATE_CHECKED);
