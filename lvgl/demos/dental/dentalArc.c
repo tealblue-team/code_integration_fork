@@ -53,7 +53,7 @@ void dentalArcInit(lv_obj_t* parent) {
         lv_style_set_img_recolor(&greenPressedStyle, colorGreen);
 
         dentalArcTopFirstLeft = lv_img_create(parent);
-        //createDentalGroup(dentalArcTopFirstLeft, &dentalArcTopFirstLeftImg);
+        createDentalGroup(dentalArcTopFirstLeft, &dentalArcTopFirstLeftImg);
         changeDentalGroupPositioning(dentalArcTopFirstLeft, -1, -1, 0, 0);
         lv_obj_add_state(dentalArcTopFirstLeft, LV_STATE_CHECKED);
 
