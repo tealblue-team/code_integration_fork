@@ -107,7 +107,7 @@ void dentalArcInit(lv_obj_t* parent) {
         dentalGroupsArray[9] = dentalArcRightMost;
 
         initialized = true;
-        resetInitialChecked();
+        resetInitialChecked_all();
         setUpCallbackBtnReset();
         
     }
@@ -146,12 +146,27 @@ void setUpCallbackBtnReset(){
 
 }
 
-void resetInitialChecked() {
+
+//Function for "color" central dental arc
+void resetInitialChecked_central_button()
+{
+    if(initialized) {
+        for(int i = 0; i < NUMDENTALGROUPS; i++) {
+            if(i == 2 || i == 3 || i == 6 || i == 7)
+                lv_obj_add_state(dentalGroupsArray[i], LV_STATE_CHECKED);
+            else
+                lv_obj_clear_state(dentalGroupsArray[i], LV_STATE_CHECKED);
+        }
+    }
+}
+
+
+void resetInitialChecked_all() {
     if (initialized) {
         for (int i = 0; i < NUMDENTALGROUPS; i++) {
-            //if (i == 2 || i == 3 || i == 6 || i == 7)
-                //lv_obj_add_state(dentalGroupsArray[i], LV_STATE_CHECKED);
-            //else
+            if (i == 2 || i == 3 || i == 6 || i == 7)
+                lv_obj_add_state(dentalGroupsArray[i], LV_STATE_CHECKED);
+            else
                 lv_obj_clear_state(dentalGroupsArray[i], LV_STATE_CHECKED);
         }
     }
