@@ -149,6 +149,7 @@ void deselectAllOtherButtons(lv_event_t* e) {
     lv_state_t state = lv_obj_get_state(target);
     if (state % 2 != 0) {
         lv_obj_clear_state(topSelectionButton, LV_STATE_CHECKED);
+        lv_obj_clear_state(topSeleButton_2, LV_STATE_CHECKED);
         lv_obj_clear_state(BottomMidSelectionButton, LV_STATE_CHECKED);
         lv_obj_clear_state(BottomLeftSelectionButton, LV_STATE_CHECKED);
         lv_obj_clear_state(BottomRightSelectionButton, LV_STATE_CHECKED);
