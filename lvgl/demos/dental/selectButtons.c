@@ -79,9 +79,9 @@ void buttonsInit(lv_obj_t* parent) {
     lv_coord_t botSelectBtnPos = lv_obj_get_width(parent) * 0.18;
 
 
-    topSelectionButton = lv_img_create(parent);
+    topSelectionButton = lv_img_create(topSelectionButton);
     imgButtonSetUp(topSelectionButton, &topSelectionButtonImg);
-    lv_obj_align(topSelectionButton, LV_ALIGN_TOP_MID, 5, 5);
+    lv_obj_align(topSelectionButton, LV_ALIGN_TOP_MID, 0, 10);
     lv_obj_add_flag(topSelectionButton, LV_OBJ_FLAG_CHECKABLE);
     lv_obj_clear_state(topSelectionButton, LV_STATE_CHECKED);
     lv_obj_add_style(topSelectionButton, &greenPressedStyle, LV_STATE_CHECKED);
