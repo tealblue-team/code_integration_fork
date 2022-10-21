@@ -79,17 +79,17 @@ void buttonsInit(lv_obj_t* parent) {
 
     lv_coord_t botSelectBtnPos = lv_obj_get_width(parent) * 0.18;
 
-
-    topSelectionButton = lv_img_create(parent);
-    imgButtonSetUp(topSelectionButton, &topSelectionButtonImg);
-    lv_obj_align(topSelectionButton, LV_ALIGN_TOP_MID, 0, 3);
-    lv_obj_add_flag(topSelectionButton, LV_OBJ_FLAG_CHECKABLE);
-    lv_obj_clear_state(topSelectionButton, LV_STATE_CHECKED);
-    lv_obj_add_style(topSelectionButton, &greenPressedStyle, LV_STATE_CHECKED);
-    lv_obj_add_event_cb(topSelectionButton, topSelectionChecked, LV_EVENT_VALUE_CHANGED,
+    BottomLeftSelectionButton = lv_img_create(parent);
+    imgButtonSetUp(BottomLeftSelectionButton, &BottomLeftSelectionButtonImg);
+    lv_obj_align(BottomLeftSelectionButton, LV_ALIGN_TOP_MID, 0, 10);
+    lv_obj_add_flag(BottomLeftSelectionButton, LV_OBJ_FLAG_CHECKABLE);
+    lv_obj_clear_state(BottomLeftSelectionButton, LV_STATE_CHECKED);
+    lv_obj_add_style(BottomLeftSelectionButton, &greenPressedStyle, LV_STATE_CHECKED);
+    lv_obj_add_event_cb(BottomLeftSelectionButton, bottomLeftSelectionChecked, LV_EVENT_VALUE_CHANGED,
                         NULL); // collego evento a funzione di callback
-    lv_obj_add_event_cb(topSelectionButton, deselectAllOtherButtons, LV_EVENT_VALUE_CHANGED, NULL);
-    lv_obj_add_event_cb(topSelectionButton, isOnBtnAreaCentered, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(BottomLeftSelectionButton, deselectAllOtherButtons, LV_EVENT_VALUE_CHANGED, NULL);
+    lv_obj_add_event_cb(BottomLeftSelectionButton, isOnBtnAreaCentered, LV_EVENT_ALL, NULL);
+    
 
   
 
