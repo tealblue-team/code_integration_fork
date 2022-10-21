@@ -146,10 +146,6 @@ void setUpCallbackBtnReset(){
 
 }
 
-
-
-
-
 //After pressed of reset button - reset all
 void reset_all_dentalArc() {
     if (initialized) {
@@ -195,7 +191,8 @@ void select_central_part(lv_event_t * e){
     } else {
         lv_obj_clear_state(target, LV_STATE_CHECKED);
         for(int i = 1; i < NUMDENTALGROUPS - 1; i++) {
-            lv_obj_clear_state(dentalGroupsArray[i], LV_STATE_CHECKED);
+            if(i == 2 || i == 3 || i == 6 || i == 7)
+                lv_obj_clear_state(dentalGroupsArray[i], LV_STATE_CHECKED);
         }
     }
 }
