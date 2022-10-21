@@ -53,7 +53,7 @@ void dentalArcInit(lv_obj_t* parent) {
         lv_style_set_img_recolor(&greenPressedStyle, colorGreen);
 
         dentalArcTopFirstLeft = lv_img_create(parent);
-        createDentalGroup(dentalArcTopFirstLeft, &dentalArcTopFirstLeftImg);
+        //createDentalGroup(dentalArcTopFirstLeft, &dentalArcTopFirstLeftImg);
         changeDentalGroupPositioning(dentalArcTopFirstLeft, -1, -1, 0, 0);
         lv_obj_add_state(dentalArcTopFirstLeft, LV_STATE_CHECKED);
 
@@ -123,7 +123,7 @@ void createDentalGroup(lv_obj_t* dentalGroup, lv_img_dsc_t* imgDesc) {
     lv_img_set_size_mode(dentalGroup, LV_IMG_SIZE_MODE_REAL);
     lv_obj_set_size(dentalGroup, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
     lv_obj_add_flag(dentalGroup, LV_OBJ_FLAG_CHECKABLE);
-    //lv_obj_add_style(dentalGroup, &greenPressedStyle, LV_STATE_CHECKED);
+    lv_obj_add_style(dentalGroup, &greenPressedStyle, LV_STATE_CHECKED);
 }
 
 /*
