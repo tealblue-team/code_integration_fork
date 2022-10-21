@@ -52,12 +52,12 @@ void dentalArcInit(lv_obj_t* parent) {
         lv_style_set_img_recolor_opa(&greenPressedStyle, LV_OPA_30);
         lv_style_set_img_recolor(&greenPressedStyle, colorGreen);
 
-        //dentalArcTopFirstLeft = lv_img_create(parent);
-        //createDentalGroup(dentalArcTopFirstLeft, &dentalArcTopFirstLeftImg);
-        //changeDentalGroupPositioning(dentalArcTopFirstLeft, -1, -1, 0, 0);
-        //lv_obj_add_state(dentalArcTopFirstLeft, LV_STATE_CHECKED);
+        dentalArcTopFirstLeft = lv_img_create(parent);
+        createDentalGroup(dentalArcTopFirstLeft, &dentalArcTopFirstLeftImg);
+        changeDentalGroupPositioning(dentalArcTopFirstLeft, -1, -1, 0, 0);
+        lv_obj_add_state(dentalArcTopFirstLeft, LV_STATE_CHECKED);
 
-        //dentalGroupsArray[2] = dentalArcTopFirstLeft;
+        dentalGroupsArray[2] = dentalArcTopFirstLeft;
 
         //dentalArcBottomFirstLeft = lv_img_create(parent);
         //createDentalGroup(dentalArcBottomFirstLeft, &dentalArcBottomFirstLeftImg);
