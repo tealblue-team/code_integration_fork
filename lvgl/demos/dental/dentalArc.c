@@ -87,11 +87,6 @@ void dentalArcInit(lv_obj_t* parent) {
         changeDentalGroupPositioning(dentalArcBottomMiddleLeft, -1, 1, lv_obj_get_width(dentalArcTopFirstLeft) - 8, 30);
         dentalGroupsArray[5] = dentalArcBottomMiddleLeft;
 
-        dentalArcBottomMiddleLeft = lv_img_create(parent);
-        createDentalGroup(dentalArcBottomMiddleLeft, &dentalArcBottomMiddleLeftImg);
-        changeDentalGroupPositioning(dentalArcBottomMiddleLeft, -1, 1, lv_obj_get_width(dentalArcTopFirstLeft) - 4, 15);
-        dentalGroupsArray[5] = dentalArcBottomMiddleLeft;
-
         dentalArcTopMiddleRight = lv_img_create(parent);
         createDentalGroup(dentalArcTopMiddleRight, &dentalArcTopMiddleRightImg);
         changeDentalGroupPositioning(dentalArcTopMiddleRight, 1, -1, lv_obj_get_width(dentalArcTopFirstLeft), 0);

@@ -110,16 +110,16 @@ void buttonsInit(lv_obj_t* parent) {
 
     lv_coord_t posTopMidSelect = lv_obj_get_height(topSelectionButton) * 2.3;
     
-    topMidSelectionButton = lv_img_create(parent);
-    imgButtonSetUp(topMidSelectionButton, &topMidSelectionButtonImg);
-    lv_obj_align(topMidSelectionButton, LV_ALIGN_TOP_MID, 0, posTopMidSelect);
-    lv_obj_add_flag(topMidSelectionButton, LV_OBJ_FLAG_CHECKABLE);
-    lv_obj_clear_state(topMidSelectionButton, LV_STATE_CHECKED);
-    lv_obj_add_style(topMidSelectionButton, &greenPressedStyle, LV_STATE_CHECKED);
-    lv_obj_add_event_cb(topMidSelectionButton, topMidSelectionChecked, LV_EVENT_VALUE_CHANGED, NULL);
-    lv_obj_add_event_cb(topMidSelectionButton, deselectAllOtherButtons, LV_EVENT_VALUE_CHANGED, NULL);
-    lv_obj_add_event_cb(topMidSelectionButton, isOnBtnAreaCentered, LV_EVENT_ALL, NULL);
-    lv_obj_add_flag(topMidSelectionButton, LV_OBJ_FLAG_HIDDEN);
+    //topMidSelectionButton = lv_img_create(parent);
+    //imgButtonSetUp(topMidSelectionButton, &topMidSelectionButtonImg);
+    //lv_obj_align(topMidSelectionButton, LV_ALIGN_TOP_MID, 0, posTopMidSelect);
+    //lv_obj_add_flag(topMidSelectionButton, LV_OBJ_FLAG_CHECKABLE);
+    //lv_obj_clear_state(topMidSelectionButton, LV_STATE_CHECKED);
+    //lv_obj_add_style(topMidSelectionButton, &greenPressedStyle, LV_STATE_CHECKED);
+    //lv_obj_add_event_cb(topMidSelectionButton, topMidSelectionChecked, LV_EVENT_VALUE_CHANGED, NULL);
+    //lv_obj_add_event_cb(topMidSelectionButton, deselectAllOtherButtons, LV_EVENT_VALUE_CHANGED, NULL);
+    //lv_obj_add_event_cb(topMidSelectionButton, isOnBtnAreaCentered, LV_EVENT_ALL, NULL);
+    //lv_obj_add_flag(topMidSelectionButton, LV_OBJ_FLAG_HIDDEN);
 }
 
 void deselectAllButtons() {
