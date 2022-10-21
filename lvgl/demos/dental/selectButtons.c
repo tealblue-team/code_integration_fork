@@ -3,7 +3,6 @@
 
 /* Risorse esterne nella cartella resources*/
 extern lv_img_dsc_t topSelectionButtonImg;
-extern lv_img_dsc_t topSelectionButtonImg_2;
 extern lv_img_dsc_t BottomLeftSelectionButtonImg;
 extern lv_img_dsc_t BottomMidSelectionButtonImg;
 extern lv_img_dsc_t BottomRightSelectionButtonImg;
