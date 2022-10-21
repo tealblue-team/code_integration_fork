@@ -139,6 +139,7 @@ void buttonsInit(lv_obj_t* parent) {
 
 void deselectAllButtons() {
     lv_obj_clear_state(topSelectionButton, LV_STATE_CHECKED);
+    lv_obj_clear_state(topSelectionButton, LV_STATE_CHECKED);
     lv_obj_clear_state(BottomMidSelectionButton, LV_STATE_CHECKED);
     lv_obj_clear_state(BottomLeftSelectionButton, LV_STATE_CHECKED);
     lv_obj_clear_state(BottomRightSelectionButton, LV_STATE_CHECKED);
