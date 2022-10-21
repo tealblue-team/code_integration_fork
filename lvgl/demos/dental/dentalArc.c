@@ -22,7 +22,7 @@ extern lv_img_dsc_t dentalArcTopMiddleRightImg;
 
 static lv_style_t greenPressedStyle;
 
-static bool initialized = false;
+static bool initialized = true;
 
 /* Puntatori ai gruppi dentali*/
 lv_obj_t* leftMostTeeth; //0
