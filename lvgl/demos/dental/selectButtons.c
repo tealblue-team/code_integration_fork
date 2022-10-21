@@ -83,6 +83,7 @@ void buttonsInit(lv_obj_t* parent) {
     topSelectionButton = lv_img_create(parent);
     imgButtonSetUp(topSelectionButton, &topSelectionButtonImg);
     lv_obj_align(topSelectionButton, LV_ALIGN_CENTER,0,-120);
+    lv_obj_set_content_width(topSelectionButton,30)
     lv_obj_add_flag(topSelectionButton, LV_OBJ_FLAG_CHECKABLE);
     lv_obj_clear_state(topSelectionButton, LV_STATE_CHECKED);
     lv_obj_add_style(topSelectionButton, &greenPressedStyle, LV_STATE_CHECKED);
