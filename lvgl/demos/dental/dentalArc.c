@@ -47,10 +47,10 @@ void dentalArcInit(lv_obj_t* parent) {
     
     if (!initialized) {
         /* init style pressed*/
-        //lv_color_t colorGreen = lv_color_hex(0x448300);
-        //lv_style_init(&greenPressedStyle);
-        //lv_style_set_img_recolor_opa(&greenPressedStyle, LV_OPA_30);
-        //lv_style_set_img_recolor(&greenPressedStyle, colorGreen);
+        lv_color_t colorGreen = lv_color_hex(0x448300);
+        lv_style_init(&greenPressedStyle);
+        lv_style_set_img_recolor_opa(&greenPressedStyle, LV_OPA_30);
+        lv_style_set_img_recolor(&greenPressedStyle, colorGreen);
 
         dentalArcTopFirstLeft = lv_img_create(parent);
         createDentalGroup(dentalArcTopFirstLeft, &dentalArcTopFirstLeftImg);
@@ -106,7 +106,7 @@ void dentalArcInit(lv_obj_t* parent) {
         changeDentalGroupPositioning(dentalArcRightMost, 1, 0, lv_obj_get_width(dentalArcTopFirstLeft) + lv_obj_get_width(dentalArcTopMiddleLeft) - 10, 50);
         dentalGroupsArray[9] = dentalArcRightMost;
 
-        //setUpCallbackBtnReset();
+        setUpCallbackBtnReset();
         initialized = true;
     }
 }
@@ -116,10 +116,6 @@ void dentalArcInit(lv_obj_t* parent) {
 * che è salvato nel rispettivo file .c
 */
 void createDentalGroup(lv_obj_t* dentalGroup, lv_img_dsc_t* imgDesc) {
-    lv_color_t colorGreen = lv_color_hex(0x448300);
-    lv_style_init(&greenPressedStyle);
-    lv_style_set_img_recolor_opa(&greenPressedStyle, LV_OPA_30);
-    lv_style_set_img_recolor(&greenPressedStyle, colorGreen);
     lv_img_set_src(dentalGroup, imgDesc);
     lv_img_set_zoom(dentalGroup, zoomFactor);
     lv_obj_add_flag(dentalGroup, LV_OBJ_FLAG_CLICKABLE);
@@ -151,10 +147,10 @@ void setUpCallbackBtnReset(){
 void resetInitialChecked() {
     if (initialized) {
         for (int i = 0; i < NUMDENTALGROUPS; i++) {
-            if (i == 2 || i == 3 || i == 6 || i == 7)
+            //if (i == 2 || i == 3 || i == 6 || i == 7)
                 lv_obj_add_state(dentalGroupsArray[i], LV_STATE_CHECKED);
-            else
-                lv_obj_clear_state(dentalGroupsArray[i], LV_STATE_CHECKED);
+            //else
+                //lv_obj_clear_state(dentalGroupsArray[i], LV_STATE_CHECKED);
         }
     }
 }
