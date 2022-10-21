@@ -82,8 +82,8 @@ void buttonsInit(lv_obj_t* parent) {
 
     topSelectionButton = lv_img_create(parent);
     imgButtonSetUp(topSelectionButton, &topSelectionButtonImg);
-    lv_obj_align(topSelectionButton, LV_ALIGN_TOP_MID, 0, 10);
     lv_obj_set_width(topSelectionButton, 4);
+    lv_obj_align(topSelectionButton, LV_ALIGN_TOP_MID, 0, 10);
     lv_obj_add_flag(topSelectionButton, LV_OBJ_FLAG_CHECKABLE);
     lv_obj_clear_state(topSelectionButton, LV_STATE_CHECKED);
     lv_obj_add_style(topSelectionButton, &greenPressedStyle, LV_STATE_CHECKED);
