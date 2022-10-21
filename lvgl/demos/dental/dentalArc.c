@@ -181,8 +181,10 @@ void topSelectionChecked(lv_event_t* e) {
 }
 
 // Function for selected/deselected central dental arc
-void select_central_part()
-{
+void select_central_part(lv_event_t * e){
+    lv_obj_t * target = lv_event_get_target(e);
+    lv_state_t state  = lv_obj_get_state(target);
+
     if(initialized) {
         for(int i = 0; i < NUMDENTALGROUPS; i++) {
             if(i == 2 || i == 3 || i == 6 || i == 7)
