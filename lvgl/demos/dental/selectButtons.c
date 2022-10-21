@@ -15,6 +15,7 @@ extern lv_style_t greenPressedStyle;
 
 /* Puntatore ai bottoni*/
 lv_obj_t* topSelectionButton;
+lv_obj_t * topSelectionButtonImg_2;
 lv_obj_t* BottomMidSelectionButton;
 lv_obj_t* BottomLeftSelectionButton;
 lv_obj_t* BottomRightSelectionButton;
