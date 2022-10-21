@@ -87,7 +87,7 @@ void buttonsInit(lv_obj_t* parent) {
     lv_obj_add_flag(topSeleButton_2, LV_OBJ_FLAG_CHECKABLE);
     lv_obj_clear_state(topSeleButton_2, LV_STATE_CHECKED);
     lv_obj_add_style(topSeleButton_2, &greenPressedStyle, LV_STATE_CHECKED);
-    lv_obj_add_event_cb(topSeleButton_2, resetInitialChecked_central_button, LV_EVENT_VALUE_CHANGED,
+    lv_obj_add_event_cb(topSeleButton_2, select_central_part, LV_EVENT_VALUE_CHANGED,
                         NULL); // collego evento a funzione di callback
     lv_obj_add_event_cb(topSeleButton_2, deselectAllOtherButtons, LV_EVENT_VALUE_CHANGED, NULL);
     lv_obj_add_event_cb(topSeleButton_2, isOnBtnAreaCentered, LV_EVENT_ALL, NULL);
