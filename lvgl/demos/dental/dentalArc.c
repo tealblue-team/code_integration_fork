@@ -47,10 +47,10 @@ void dentalArcInit(lv_obj_t* parent) {
     
     if (!initialized) {
         /* init style pressed*/
-        lv_color_t colorGreen = lv_color_hex(0x448300);
-        lv_style_init(&greenPressedStyle);
-        lv_style_set_img_recolor_opa(&greenPressedStyle, LV_OPA_30);
-        lv_style_set_img_recolor(&greenPressedStyle, colorGreen);
+        //lv_color_t colorGreen = lv_color_hex(0x448300);
+        //lv_style_init(&greenPressedStyle);
+        //lv_style_set_img_recolor_opa(&greenPressedStyle, LV_OPA_30);
+        //lv_style_set_img_recolor(&greenPressedStyle, colorGreen);
 
         dentalArcTopFirstLeft = lv_img_create(parent);
         createDentalGroup(dentalArcTopFirstLeft, &dentalArcTopFirstLeftImg);

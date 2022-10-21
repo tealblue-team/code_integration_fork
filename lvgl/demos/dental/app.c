@@ -63,9 +63,6 @@ void tileSwipe_cb(lv_event_t* e) {
 
 void app_create()
 {
-    // Add constant
-    //
-
     tileView = lv_tileview_create(lv_scr_act());
     lv_obj_set_size(tileView, Width_screen, Height_screen);
     lv_obj_align(tileView, LV_ALIGN_CENTER, 0, 0);
