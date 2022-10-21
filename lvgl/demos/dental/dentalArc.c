@@ -107,7 +107,7 @@ void dentalArcInit(lv_obj_t* parent) {
         dentalGroupsArray[9] = dentalArcRightMost;
 
         initialized = true;
-        reset_central_part(); // reset all dental parts (central part)
+        reset_all_dentalArc(); // reset all dental parts (central part)
         setUpCallbackBtnReset();
         
     }
