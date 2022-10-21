@@ -65,6 +65,17 @@ void imgButtonSetUp(lv_obj_t* obj, lv_img_dsc_t* desc) {
     lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST);
 }
 
+//Set Button for central part
+void imgButtonSetUp_central_part(lv_obj_t * obj, lv_img_dsc_t * desc)
+{
+    lv_img_set_src(obj, desc);
+    lv_img_set_zoom(obj, 70);
+    lv_obj_add_flag(obj, LV_OBJ_FLAG_CLICKABLE);
+    lv_img_set_size_mode(obj, LV_IMG_SIZE_MODE_REAL);
+    lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
+    lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST);
+}
+
 
 void buttonsInit(lv_obj_t* parent) {
 
@@ -82,7 +93,7 @@ void buttonsInit(lv_obj_t* parent) {
 
 
     topSeleButton_2 = lv_img_create(parent);
-    imgButtonSetUp(topSeleButton_2, &topSelectionButtonImg);
+    imgButtonSetUp_central_part(topSeleButton_2, &topSelectionButtonImg);
     lv_obj_align(topSeleButton_2, LV_ALIGN_CENTER, 0, -122);
     lv_obj_add_flag(topSeleButton_2, LV_OBJ_FLAG_CHECKABLE);
     lv_obj_clear_state(topSeleButton_2, LV_STATE_CHECKED);
