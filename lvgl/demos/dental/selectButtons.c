@@ -65,7 +65,9 @@ void imgButtonSetUp(lv_obj_t* obj, lv_img_dsc_t* desc) {
     lv_obj_add_flag(obj, LV_OBJ_FLAG_ADV_HITTEST);
 }
 
-//Set Button for central part
+//Set Button for central part 
+//Button is an img presents on resources folder
+//AC
 void imgButtonSetUp_central_part(lv_obj_t * obj, lv_img_dsc_t * desc)
 {
     lv_img_set_src(obj, desc);
@@ -91,7 +93,8 @@ void buttonsInit(lv_obj_t* parent) {
 
     lv_coord_t botSelectBtnPos = lv_obj_get_width(parent) * 0.18;
 
-
+    //Added new button for selected central part
+    //AC
     topSeleButton_2 = lv_img_create(parent);
     imgButtonSetUp_central_part(topSeleButton_2, &topSelectionButtonImg);
     lv_obj_align(topSeleButton_2, LV_ALIGN_CENTER, 0, -122);
