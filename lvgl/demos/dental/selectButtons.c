@@ -90,9 +90,7 @@ void buttonsInit(lv_obj_t* parent) {
     lv_obj_add_event_cb(topSelectionButton, deselectAllOtherButtons, LV_EVENT_VALUE_CHANGED, NULL);
     lv_obj_add_event_cb(topSelectionButton, isOnBtnAreaCentered, LV_EVENT_ALL, NULL);
 
-    lv_coord_t botSelectBtnPos = lv_obj_get_width(parent) * 0.30;
-
-
+  
 
     BottomMidSelectionButton = lv_img_create(parent);
     imgButtonSetUp(BottomMidSelectionButton, &BottomMidSelectionButtonImg);
