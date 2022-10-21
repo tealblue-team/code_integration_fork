@@ -106,9 +106,10 @@ void dentalArcInit(lv_obj_t* parent) {
         changeDentalGroupPositioning(dentalArcRightMost, 1, 0, lv_obj_get_width(dentalArcTopFirstLeft) + lv_obj_get_width(dentalArcTopMiddleLeft) - 10, 50);
         dentalGroupsArray[9] = dentalArcRightMost;
 
-        setUpCallbackBtnReset();
-        resetInitialChecked();
         initialized = true;
+        resetInitialChecked();
+        setUpCallbackBtnReset();
+        
     }
 }
 
