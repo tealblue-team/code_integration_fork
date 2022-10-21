@@ -66,6 +66,7 @@ void imgButtonSetUp(lv_obj_t* obj, lv_img_dsc_t* desc) {
 
 
 void buttonsInit(lv_obj_t* parent) {
+
     topSelectionButton = lv_img_create(parent);
     imgButtonSetUp(topSelectionButton, &topSelectionButtonImg);
     lv_obj_align(topSelectionButton, LV_ALIGN_TOP_MID, 0, 25);
@@ -76,7 +77,7 @@ void buttonsInit(lv_obj_t* parent) {
     lv_obj_add_event_cb(topSelectionButton, deselectAllOtherButtons, LV_EVENT_VALUE_CHANGED, NULL);
     lv_obj_add_event_cb(topSelectionButton, isOnBtnAreaCentered, LV_EVENT_ALL, NULL);
 
-    //lv_coord_t botSelectBtnPos = lv_obj_get_width(parent) * 0.18;
+    lv_coord_t botSelectBtnPos = lv_obj_get_width(parent) * 0.18;
 
 
     topSelectionButton = lv_img_create(parent);
