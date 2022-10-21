@@ -77,12 +77,12 @@ void buttonsInit(lv_obj_t* parent) {
     lv_obj_add_event_cb(topSelectionButton, deselectAllOtherButtons, LV_EVENT_VALUE_CHANGED, NULL);
     lv_obj_add_event_cb(topSelectionButton, isOnBtnAreaCentered, LV_EVENT_ALL, NULL);
 
-    lv_coord_t botSelectBtnPos = lv_obj_get_width(parent) * 0.20;
+    lv_coord_t botSelectBtnPos = lv_obj_get_width(parent) * 0.18;
 
 
     topSelectionButton = lv_img_create(parent);
     imgButtonSetUp(topSelectionButton, &topSelectionButtonImg);
-    lv_obj_align(topSelectionButton, LV_ALIGN_TOP_MID, 0, 2);
+    lv_obj_align(topSelectionButton, LV_ALIGN_TOP_MID, 0, 3);
     lv_obj_add_flag(topSelectionButton, LV_OBJ_FLAG_CHECKABLE);
     lv_obj_clear_state(topSelectionButton, LV_STATE_CHECKED);
     lv_obj_add_style(topSelectionButton, &greenPressedStyle, LV_STATE_CHECKED);
