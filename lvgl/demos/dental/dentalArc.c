@@ -148,9 +148,9 @@ void resetInitialChecked() {
     if (initialized) {
         for (int i = 0; i < NUMDENTALGROUPS; i++) {
             //if (i == 2 || i == 3 || i == 6 || i == 7)
-                lv_obj_add_state(dentalGroupsArray[i], LV_STATE_CHECKED);
+                //lv_obj_add_state(dentalGroupsArray[i], LV_STATE_CHECKED);
             //else
-                //lv_obj_clear_state(dentalGroupsArray[i], LV_STATE_CHECKED);
+                lv_obj_clear_state(dentalGroupsArray[i], LV_STATE_CHECKED);
         }
     }
 }
